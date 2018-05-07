@@ -19,6 +19,9 @@
     "paths": {
       "ngFoundry": [
         "dist/ngFoundry"
+      ],
+      "fo-inspect": [
+        "dist/fo-inspect"
       ]
     }
   }

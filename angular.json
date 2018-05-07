@@ -156,6 +156,46 @@
           }
         }
       }
+    },
+    "fo-inspect": {
+      "root": "projects/fo-inspect",
+      "sourceRoot": "projects/fo-inspect/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/fo-inspect/tsconfig.lib.json",
+            "project": "projects/fo-inspect/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/fo-inspect/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fo-inspect/src/test.ts",
+            "tsConfig": "projects/fo-inspect/tsconfig.spec.json",
+            "karmaConfig": "projects/fo-inspect/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fo-inspect/tsconfig.lib.json",
+              "projects/fo-inspect/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngShapes"
