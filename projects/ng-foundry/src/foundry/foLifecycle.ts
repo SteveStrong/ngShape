@@ -50,7 +50,7 @@ export class foLifecycleEvent {
   }
 }
 
-//this is needed to prevent circular communiation
+// this is needed to prevent circular communiation
 // create => create => create across browsers
 export class foLifecycleEventLock {
   private _processLock = {};
